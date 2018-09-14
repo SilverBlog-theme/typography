@@ -4,5 +4,13 @@
   "description": "Rediscover the beauty of typography, now in SilverBlog.",
   "repository": "https://github.com/silverblogtheme/typography",
   "author": "Makito <master@keep.moe>, tcdw <tcdw2011@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production && node scripts/build-sass.js",
+    "build-dev": "cross-env NODE_ENV=development && node scripts/build-sass.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "compile-sass": "^0.0.5"
+  }
 }

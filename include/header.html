@@ -1,0 +1,46 @@
+{%- if page_info.title=="index" -%}
+    {% set title=system_config.Project_Name %}
+    {% set description=system_config.Project_Description %}
+{%- else -%}
+    {% set title=page_info.title %}
+    {% set description=page_info.excerpt %}
+{%- endif -%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/{{ system_config.Theme }}/css/style{% if template_config.Dark_Theme %}-dark{% endif %}.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="{{ system_config.Project_Name }}" href="/rss">
+    {% include "include/head.html" ignore missing %}
+</head>
+<body>
+    <div id="stage" class="container">
+        <div class="row">
+            <div id="side-bar" class="col-sm-3 col-xs-12 side-container invisible">
+                <div class="vertical-text site-title">
+                    <h3 tabindex="-1" class="site-title-small"><a href="/" class="a-title">{{ system_config.Project_Name }}</a></h3>
+                    <h1 tabindex="-1" class="site-title-large"><a href="/" class="a-title">{{ system_config.Project_Description }}</a></h1>
+                </div><br class="visible-lg visible-md visible-sm">
+                <div id="site-nav" class="site-title-links">
+                    <ul>
+                        {%- for item in menu_list -%}
+                            {%- if "absolute" in item -%}
+                                {%- set url = item.absolute -%}
+                            {%- else -%}
+                                {%- set url = "/post/"+item.name -%}
+                            {%- endif -%}
+                            <li><a href="{{url}}">{{ item.title }}</a></li>
+                        {%- endfor -%}
+                        <li class="soc"><a href="/rss" target="_blank" rel="noopener noreferrer"><i class="fa fa-rss">&nbsp;</i></a></li>
+                    </ul>
+                    <div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br">
+                        {% include system_config.Theme + "/include/footer-note.html" %}
+                    </div>
+                </div>
+            </div>
