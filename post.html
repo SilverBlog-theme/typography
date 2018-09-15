@@ -1,0 +1,19 @@
+{% include system_config.Theme + "/include/header.html" %}
+<div id="main-container" class="col-sm-9 col-xs-12 main-container invisible">
+    <div class="autopagerize_page_element">
+        <div class="content">
+            <div class="post-page">
+                <div class="post-container">
+                    <p class="post-title"><a>{{ page_info.title }}</a></p>
+                    <p class="post-meta">
+                        <span class="date meta-item">发布于&nbsp;{{ page_info.time }}</span>
+                    </p>
+                    {{ content|safe }}
+                </div>
+                <div>{% include "include/comment.html" ignore missing %}</div>
+            </div>
+        </div>
+    </div>
+    <div class="visible-xs site-bottom-footer">{% include system_config.Theme + "/include/footer-note.html" %}</div>
+</div>
+{% include system_config.Theme + "/include/footer.html" %}
