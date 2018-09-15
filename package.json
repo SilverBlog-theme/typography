@@ -10,7 +10,8 @@
     "build-dev": "cross-env NODE_ENV=development && node scripts/build-sass.js"
   },
   "devDependencies": {
+    "clean-css": "^4.2.1",
     "cross-env": "^5.2.0",
-    "compile-sass": "^0.0.5"
+    "node-sass": "^4.9.3"
   }
 }
