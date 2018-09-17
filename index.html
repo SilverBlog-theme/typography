@@ -10,6 +10,7 @@
                 </p>
                 <p class="post-abstract">{{ page_info.excerpt }}</p>
             </div>
+            {%- endfor -%}
             <div class="pagination no-margin-bottom">
                 <p class="clearfix">
                     <p> 第 {{ now_page }} 页 / 共 {{ page_row }} 页 &nbsp;</p>
@@ -30,7 +31,6 @@
                     </p>
                 </p>
             </div>
-            {%- endfor -%}
         </div>
     </div>
     <div class="visible-xs site-bottom-footer">{% include system_config.Theme + "/include/footer-note.html" %}</div>
