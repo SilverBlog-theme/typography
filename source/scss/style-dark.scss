@@ -19,7 +19,7 @@ $titleFontList: "HiraMinProN-W6",
 $fontList;
 $verticalPrimaryPaddingTopPatch: 0;
 $verticalSecondaryPaddingTopPatch: 1px;
-@import url('//fonts.lug.ustc.edu.cn/css?family=Source+Sans+Pro:100,300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600');
 @import "animation";
 html,
 body,
@@ -40,7 +40,7 @@ font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC"
 font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC",
  "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
  */
-  font-family: $fontList;
+  font-family: $titleFontList, $fontList;
   color: $foregroundColor;
 }
 
