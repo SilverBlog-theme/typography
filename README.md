@@ -14,6 +14,8 @@ cd templates
 curl https://raw.githubusercontent.com/SilverBlogTheme/typography/master/install.sh | bash
 ```
 
+To enable the Source Han Serif font, you should create a [Typekit](https://typekit.com) account, add [Source Han Serif Simplified Chinese](https://typekit.com/fonts/source-han-serif-simplified-chinese) to your own kit, and add the Typekit HTML code into your `include/foot.html`.
+
 ## Customize
 
 ### Changing the color scheme

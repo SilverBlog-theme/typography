@@ -14,6 +14,8 @@ cd templates
 curl https://raw.githubusercontent.com/SilverBlogTheme/typography/master/install.sh | bash
 ```
 
+如果需要启用思源宋体（Source Han Serif），请自行注册 [Typekit](https://typekit.com) 帐号，将 [Source Han Serif Simplified Chinese](https://typekit.com/fonts/source-han-serif-simplified-chinese) 加入到你的 kit，并将 Typekit JS 添加到你的 `include/foot.html` 中。
+
 ## 定制
 
 ### 改变配色方案
